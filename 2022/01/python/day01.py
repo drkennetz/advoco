@@ -1,5 +1,3 @@
-import sys
-
 VALID_PARTS = [1, 2]
 
 def day1(infile: str, part: int) -> int:
