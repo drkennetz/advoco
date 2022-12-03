@@ -18,7 +18,7 @@ round_end = {
     "Z": "win",
 }
 
-def day2_1(infile):
+def day2_1(infile: str) -> int:
     scores = 0
     with open(infile) as f:
         for line in f:
@@ -29,7 +29,7 @@ def day2_1(infile):
     return scores
             
 
-def rps1(player1action, player2action):
+def rps1(player1action: str, player2action: str) -> int:
     victories = {
         player1_action["A"]: player2_action["Z"], # rock beats scissors
         player1_action["B"]: player2_action["X"], # paper beats rock
@@ -44,7 +44,7 @@ def rps1(player1action, player2action):
     else:
         return player2_action[player2action] + 6
 
-def day2_2(infile):
+def day2_2(infile: str) -> int:
     scores = 0
     with open(infile) as f:
         for line in f:
@@ -55,7 +55,7 @@ def day2_2(infile):
     print(scores)
     return scores
 
-def rps2(player1action, roundend):
+def rps2(player1action: str, roundend: str) -> int:
     paths = {
         "lose": {"A": player2_action["Z"],
                 "B": player2_action["X"],
