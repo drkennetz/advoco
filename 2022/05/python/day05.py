@@ -16,7 +16,9 @@ def day5_2(infile: str) -> str:
     stacks, moves = parse_input(infile)
     for times, src, dest in moves:
         # this one was easier
+        # add src starting from times until the end to dest
         stacks[dest -1] += stacks[src - 1][-times:]
+        # update src to trim those off
         stacks[src -1] = stacks[src - 1][:-times]
     return ''.join(s[-1] for s in stacks)
 
